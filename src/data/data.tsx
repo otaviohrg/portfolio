@@ -11,8 +11,6 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
@@ -26,7 +24,6 @@ import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
 import {
   About,
   ContactSection,
@@ -36,7 +33,6 @@ import {
   PortfolioItem,
   SkillGroup,
   Social,
-  TestimonialSection,
   TimelineItem,
 } from './dataDef';
 
@@ -69,18 +65,19 @@ export type SectionId = typeof SectionId[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Otávio Ribas.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Brazilian <strong className="text-stone-100">Full Stack Software Engineer</strong> based in Palaiseau, Île-de-France.
+        Currently, I'm studying at the <strong className="text-stone-100">École polytechnique</strong> and working at
+        <strong className="text-stone-100">Tino</strong>, a startup where I'm helping to build a new way for retailers to buy
+        products from their suppliers in the Brazilian context.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        While I'm not coding, you can find me either doing <strong className="text-stone-100">fencing</strong>, practicing the
+        <strong className="text-stone-100">violin</strong>, enjoying the parisian <strong className="text-stone-100">night life</strong>
+        or simply studying for my college exams.
       </p>
     </>
   ),
@@ -104,16 +101,21 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I'm passionate about harnessing the power of technology to solve real-life problems in creative ways, and currently, 
+  For three years, I've studied for a Bachelor's degree in Computer Engineering at the Aeronautics Institute of Technology (ITA), but now I'm pursuing 
+  an Engineer's degree at the École polytechnique. As a Software Engineer, I love the idea of developing tools that improve people lives and 
+  that help businesses to thrive. As such, I've been working since 2022 at Tino, a company that aims to provide to retailers an easier way to 
+  purchase goods from their suppliers, specially in the reality they face in the context of credit in Brazil. Furthermore, I'm also fascinated 
+  about Artificial Intelligence, and in developing machines that can reach and surpass our own capabilities. As such, during my time at ITA I did work at
+  ITAndroids, their robotics team, where I delved into the study of CNNs and Computer Vision.
+`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: OfficeBuildingIcon},
+    {label: 'Location', text: 'Palaiseau, Île-de-France', Icon: MapIcon},
+    {label: 'Age', text: '24', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Brazilian', Icon: FlagIcon},
+    {label: 'Interests', text: 'Cinema, Fencing, Violin', Icon: SparklesIcon},
+    {label: 'Study', text: 'École polytechnique; Aeronautics Institute of Technology (ITA)', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Tino', Icon: OfficeBuildingIcon},
   ],
 };
 
@@ -126,15 +128,15 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'English',
-        level: 10,
+        level: 9,
       },
       {
         name: 'French',
-        level: 4,
+        level: 7,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'Portuguese',
+        level: 10,
       },
     ],
   },
@@ -143,15 +145,15 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 5,
       },
       {
         name: 'Typescript',
         level: 7,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'Tailwind',
+        level: 5,
       },
     ],
   },
@@ -159,33 +161,33 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
-        name: 'Node.js',
+        name: 'Golang',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'Python',
+        level: 9,
       },
       {
-        name: 'Golang',
-        level: 4,
+        name: 'C/C++',
+        level: 7,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Software & Tools',
     skills: [
       {
-        name: 'React Native',
+        name: 'Docker',
+        level: 6,
+      },
+      {
+        name: 'GCloud/Terraform',
+        level: 7,
+      },
+      {
+        name: 'SQL',
         level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
       },
     ],
   },
@@ -268,40 +270,49 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'September 2022 - Present',
+    location: 'École polytechnique',
+    title: 'Engineer\'s Degree',
+    content: <p></p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'Jan 2019 - Dec 2021',
+    location: 'Aeronautics Institute of Technology',
+    title: 'Bachelor\'s degree in Computer Engineering',
+    content: <p></p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'February 2022 - Present',
+    location: 'Tino',
+    title: 'Software Engineer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
+        <ol>
+          <li>• Currently working as a Software Engineer in the development of a backend service that communicates with
+            the institutions of the Brazilian financial market responsible for registering the status of the credit card receivables.
+            This project is being developed in Golang, with it's infrastructure in the Google Cloud being created with Terraform.
+          </li>
+          <li>• During this project, developed a client to communicate with the register institutions APIs over the HTTP protocol,
+            executing some of the key methods required for our operation. During this task, I've worked with REST in Golang,
+            with Docker, with Google Cloud and with Terraform for building the required infrastructure.
+          </li>
+        </ol>
+
+            ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'June 2021 - December 2021',
+    location: 'Radix Portfolio',
+    title: 'Software Engineer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+        <ol>
+          <li>• Worked in the development of an MVP for the company's system, by building a JavaScript program in the
+            Google Apps Script platform to be integrated with the Pipefy platform. </li>
+          <li>• Worked on the automation of various manual tasks that used to be performed daily in the office, developing
+            for this scripts in VBA and Python.</li>
+        </ol>
     ),
   },
 ];
@@ -309,26 +320,6 @@ export const experience: TimelineItem[] = [
 /**
  * Testimonial section
  */
-export const testimonial: TestimonialSection = {
-  imageSrc: testimonialImage,
-  testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
-};
 
 /**
  * Contact section
@@ -336,27 +327,27 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: '',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'otaviohrguimaraes@gmail.com',
+      href: 'mailto:otaviohrguimaraes@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Palaiseau, Île-de-France, France',
+      href: 'https://www.google.fr/maps/place/91120+Palaiseau/@48.715486,2.2190106,15z/data=!3m1!4b1!4m6!3m5!1s0x47e67815c8bc82eb:0xfcf8dd0628c34a6!8m2!3d48.714509!4d2.245748!16zL20vMDJyaHc1',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@otaviohribas',
+      href: 'https://www.instagram.com/otaviohribas/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'otaviohrg',
+      href: 'https://github.com/otaviohrg',
     },
   ],
 };
@@ -365,9 +356,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/tbakerx/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/otaviohrg'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ot%C3%A1vio-ribas-3a2621186/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/otaviohribas/'},
 ];
