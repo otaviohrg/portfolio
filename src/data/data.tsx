@@ -63,12 +63,12 @@ export const heroData: Hero = {
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I'm a Brazilian <strong className="text-stone-100">Full Stack Software Engineer</strong> based in Palaiseau, Île-de-France.
         Currently, I'm studying at the <strong className="text-stone-100">École polytechnique</strong> and working at
-        <strong className="text-stone-100">Tino</strong>, a startup where I'm helping to build a new way for retailers to buy
+        <strong className="text-stone-100"> Tino</strong>, a startup where I'm helping to build a new way for retailers to buy
         products from their suppliers in the Brazilian context.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         While I'm not coding, you can find me either doing <strong className="text-stone-100">fencing</strong>, practicing the
-        <strong className="text-stone-100">violin</strong>, enjoying the parisian <strong className="text-stone-100">night life</strong>
+        <strong className="text-stone-100"> violin</strong>, enjoying the parisian <strong className="text-stone-100">night life</strong>
         or simply studying for my college exams.
       </p>
     </>
