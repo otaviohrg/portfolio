@@ -16,6 +16,8 @@ import porfolioImage1 from '../images/portfolio/portfolio-1.webp';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import profilepic from '../images/profilepic.jpg';
+import cv from '../assets/resume.pdf';
+
 import {
   About,
   ContactSection,
@@ -32,8 +34,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Otavio Ribas',
+  description: "Portfolio of Otavio Ribas",
 };
 
 /**
@@ -61,25 +63,29 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Brazilian <strong className="text-stone-100">Full Stack Software Engineer</strong> based in Palaiseau, Île-de-France.
-        Currently, I'm studying at the <strong className="text-stone-100">École polytechnique</strong> and working at
-        <strong className="text-stone-100"> Tino</strong>, a startup where I'm helping to build a new way for retailers to buy
-        products from their suppliers in the Brazilian context.
+        I'm a Brazilian <strong className="text-stone-100">Engineering Student</strong> at <strong className="text-stone-100">École Polytechnique de Paris</strong>,
+        with emphasis on Computer Science. I've been specializing in Software Engineering and Machine Learning/AI, and have a strong academic background in CS and Applied mathematics.
+      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        Having taken part in many different engineering and development teams, I have a solid understanding of the dynamics associated with the development cycle of an engineering product, 
+        as well as extensive <strong className="text-stone-100">teamwork</strong> and <strong className="text-stone-100">communication</strong> skills. Fluent in English, French and Portuguese, and 
+        seeking to work with coworkers from diverse backgrounds.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         While I'm not coding, you can find me either doing <strong className="text-stone-100">fencing</strong>, practicing the
-        <strong className="text-stone-100"> violin</strong>, enjoying the parisian <strong className="text-stone-100">night life</strong>
-        or simply studying for my college exams.
+        <strong className="text-stone-100"> violin</strong>, <strong className="text-stone-100">producing</strong> eletronic music, or simply studying for my college exams.
       </p>
     </>
   ),
   actions: [
+    /**
     {
-      href: '/assets/resume.pdf',
+      href: {'/assets/resume.pdf'},
       text: 'Resume',
       primary: true,
       Icon: DownloadIcon,
     },
+     */
     {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
@@ -95,19 +101,20 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `I'm passionate about harnessing the power of technology to solve real-life problems in creative ways, and currently, 
   For three years, I've studied for a Bachelor's degree in Computer Engineering at the Aeronautics Institute of Technology (ITA), but now I'm pursuing 
-  an Engineer's degree at the École polytechnique. As a Software Engineer, I love the idea of developing tools that improve people lives and 
-  that help businesses to thrive. As such, I've been working since 2022 at Tino, a company that aims to provide to retailers an easier way to 
+  an Engineer's degree at the École Polytechnique de Paris, with an specialization in Software Engineering and Machine Learning/AI. As a Software Engineer, I love the idea of developing tools that improve people lives and 
+  that help businesses to thrive. As such, I've worked for a year and a half in the back-end of Tino, a company that aims to provide to retailers an easier way to 
   purchase goods from their suppliers, specially in the reality they face in the context of credit in Brazil. Furthermore, I'm also fascinated 
   about Artificial Intelligence, and in developing machines that can reach and surpass our own capabilities. As such, during my time at ITA I did work at
-  ITAndroids, their robotics team, where I delved into the study of CNNs and Computer Vision.
+  ITAndroids, their robotics team, where I delved into the study of CNNs and Computer Vision. There, I developed a research on Encoder-Decoder Networks for Semantic Segmentation, which, in 2023, led to the publication of
+  a paper on the Latin-American Robotics Symposium, awarded Best Paper at the occasion.
 `,
   aboutItems: [
     {label: 'Location', text: 'Palaiseau, Île-de-France', Icon: MapIcon},
-    {label: 'Age', text: '24', Icon: CalendarIcon},
+    {label: 'Age', text: '25', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Brazilian', Icon: FlagIcon},
-    {label: 'Interests', text: 'Cinema, Fencing, Violin', Icon: SparklesIcon},
-    {label: 'Study', text: 'École polytechnique; Aeronautics Institute of Technology (ITA)', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Tino', Icon: OfficeBuildingIcon},
+    {label: 'Interests', text: 'Machine Learning, Fencing, Violin, DJing', Icon: SparklesIcon},
+    {label: 'Study', text: 'École Polytechnique de Paris; Aeronautics Institute of Technology (ITA)', Icon: AcademicCapIcon},
+    //{label: 'Employment', text: 'Tino', Icon: OfficeBuildingIcon},
   ],
 };
 
@@ -124,7 +131,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'French',
-        level: 7,
+        level: 8,
       },
       {
         name: 'Portuguese',
@@ -137,7 +144,7 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 5,
+        level: 6,
       },
       {
         name: 'Typescript',
@@ -179,6 +186,23 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'SQL',
+        level: 9,
+      },
+    ],
+  },
+  {
+    name: 'Machine Learning',
+    skills: [
+      {
+        name: 'Pandas',
+        level: 9,
+      },
+      {
+        name: 'Pytorch',
+        level: 8,
+      },
+      {
+        name: 'TensorFlow',
         level: 9,
       },
     ],
@@ -234,14 +258,16 @@ export const experience: TimelineItem[] = [
     title: 'Software Engineer',
     content: (
         <ol>
-          <li>• Currently working as a Software Engineer in the development of a backend service that communicates with
-            the institutions of the Brazilian financial market responsible for registering the status of the credit card receivables.
-            This project is being developed in Golang, with it's infrastructure in the Google Cloud being created with Terraform.
+          <li>• Extended and maintained the internal system of 100k+ lines of code, distributed across more than 20 microservices.
           </li>
-          <li>• During this project, developed a client to communicate with the register institutions APIs over the HTTP protocol,
-            executing some of the key methods required for our operation. During this task, I've worked with REST in Golang,
-            with Docker, with Google Cloud and with Terraform for building the required infrastructure.
+          <li>• Developed the communication system used for sending automated messages to more than 1000 clients.
           </li>
+          <li>• Created an interface to be used by more than 20 colleagues from the operations team to access relevant data and metrics for specific
+clients, consumed from 5 different APIs.
+          </li>
+          <li>• Optimized routines from said interface, implementing parallel calls that made them 2x faster for larger data.
+          </li>
+          <li>• Prepared over 10 Metabase views containing core metrics for the business.          </li>
         </ol>
 
             ),
@@ -252,10 +278,10 @@ export const experience: TimelineItem[] = [
     title: 'Software Engineer',
     content: (
         <ol>
-          <li>• Worked in the development of an MVP for the company's system, by building a JavaScript program in the
-            Google Apps Script platform to be integrated with the Pipefy platform. </li>
-          <li>• Worked on the automation of various manual tasks that used to be performed daily in the office, developing
-            for this scripts in VBA and Python.</li>
+          <li>• Built an MVP for the new asset analysis automation system, building a JavaScript program for Google Apps Script and integrating it with
+the Pipefy platform. </li>
+          <li>• Wrote scripts for automating core tasks of the business, cutting the time spent on them by more than 90%.</li>
+          <li>• Programmed a script for scraping 500+ pages of public documents.</li>
         </ol>
     ),
   },
@@ -301,6 +327,6 @@ export const contact: ContactSection = {
  */
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/otaviohrg'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ot%C3%A1vio-ribas-3a2621186/'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/otaviohrg/'},
   {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/otaviohribas/'},
 ];
