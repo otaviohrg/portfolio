@@ -1,10 +1,10 @@
 import {
   AcademicCapIcon,
   CalendarIcon,
-  DownloadIcon,
+  //DownloadIcon,
   FlagIcon,
   MapIcon,
-  OfficeBuildingIcon,
+  //OfficeBuildingIcon,
   SparklesIcon,
 } from '@heroicons/react/outline';
 
@@ -16,7 +16,7 @@ import porfolioImage1 from '../images/portfolio/portfolio-1.webp';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import profilepic from '../images/profilepic.jpg';
-import cv from '../assets/resume.pdf';
+//import cv from '../assets/resume.pdf';
 
 import {
   About,
